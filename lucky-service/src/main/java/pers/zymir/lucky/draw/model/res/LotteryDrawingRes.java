@@ -15,4 +15,12 @@ public class LotteryDrawingRes {
   public boolean isLottery() {
     return awardId != null && awardId > 0;
   }
+
+  public LotteryDrawingRes() {
+
+  }
+
+  public LotteryDrawingRes(Long awardId) {
+    this.awardId = awardId;
+  }
 }
