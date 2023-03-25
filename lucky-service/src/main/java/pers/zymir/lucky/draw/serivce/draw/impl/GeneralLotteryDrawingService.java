@@ -12,7 +12,7 @@ import pers.zymir.lucky.draw.model.res.LotteryDrawingRes;
 import pers.zymir.lucky.draw.serivce.draw.AbstractLotteryDrawingService;
 
 @Service
-public class LotteryDrawingService extends AbstractLotteryDrawingService {
+public class GeneralLotteryDrawingService extends AbstractLotteryDrawingService {
 
   @Autowired
   private IActivityConfigItemService activityConfigItemService;
