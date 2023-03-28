@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 import java.util.Set;
 
+import pers.zymir.lucky.award.model.vo.AwardVO;
+import pers.zymir.lucky.award.service.IAwardService;
 import pers.zymir.lucky.config.service.IActivityConfigItemService;
 import pers.zymir.lucky.draw.model.req.LotteryDrawingReq;
 import pers.zymir.lucky.draw.model.res.LotteryDrawingRes;
@@ -16,6 +18,9 @@ public class GeneralLotteryDrawingService extends AbstractLotteryDrawingService 
 
   @Autowired
   private IActivityConfigItemService activityConfigItemService;
+
+  @Autowired
+  private IAwardService awardService;
 
   @Override
   protected Set<Long> queryExcludeAwardIds(LotteryDrawingReq req, Long activityConfigId) {
@@ -30,8 +35,7 @@ public class GeneralLotteryDrawingService extends AbstractLotteryDrawingService 
   @Override
   protected LotteryDrawingRes buildLotteryRes(LotteryDrawingReq req, Long awardId) {
     LotteryDrawingRes drawingRes = new LotteryDrawingRes(awardId);
-
-    // TODO 填充奖品信息等
+    drawingRes.setAwardInfo(AwardVO.apply(awardService.getById(awardId)));
     return drawingRes;
   }
 }

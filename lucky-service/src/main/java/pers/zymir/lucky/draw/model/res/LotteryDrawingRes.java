@@ -1,12 +1,13 @@
 package pers.zymir.lucky.draw.model.res;
 
 import lombok.Data;
+import pers.zymir.lucky.award.model.vo.AwardVO;
 
 @Data
 public class LotteryDrawingRes {
   private Long awardId;
 
-  // TODO 抽奖结果填充奖品信息等
+  private AwardVO awardInfo;
 
   /**
    * 是否中奖
