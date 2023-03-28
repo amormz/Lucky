@@ -6,6 +6,8 @@ import lombok.Data;
 
 @Data
 public class BaseEntity {
+  protected Long id;
+
   protected boolean deleted;
 
   protected LocalDateTime createTime;

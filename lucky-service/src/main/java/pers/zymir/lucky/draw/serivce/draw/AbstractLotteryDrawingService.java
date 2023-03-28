@@ -37,7 +37,7 @@ public abstract class AbstractLotteryDrawingService extends LotteryDrawingSuppor
     }
 
     // 执行抽奖算法
-    Set<Long> excludeAwardIds = queryExcludeAwardIds(req, activityConfig.getId());
+    Set<Long> excludeAwardIds = queryExcludeAwardIds(req, activityConfig.getActivityConfigId());
     Optional<Long> awardId =
         drawAlgorithm.get().executeDrawAlgorithm(activityAggregation.getAwardRates(), excludeAwardIds);
     log.info("执行抽奖算法完成, 活动ID:{}, 算法类型:{}, 中奖奖品Id:{}",

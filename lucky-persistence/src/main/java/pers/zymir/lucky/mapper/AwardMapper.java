@@ -13,7 +13,7 @@ public interface AwardMapper {
 
   @Select(
       " SELECT * FROM " + TABLE_NAME +
-          " WHERE id = #{id} "
+          " WHERE award_id = #{awardId} "
   )
-  LuckyAward selectById(@Param("id") Long id);
+  LuckyAward selectByAwardId(@Param("awardId") Long awardId);
 }

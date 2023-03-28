@@ -5,7 +5,7 @@ import pers.zymir.lucky.constants.DrawAlgorithmEnum;
 
 @Data
 public class ActivityConfigDTO {
-  private Long id;
+  private Long activityConfigId;
 
   private DrawAlgorithmEnum drawAlgorithm;
 }

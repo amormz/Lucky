@@ -7,7 +7,7 @@ import lombok.EqualsAndHashCode;
 @Data
 public class LuckyActivityConfigItem extends BaseEntity{
 
-  private Long id;
+  private Long activityConfigItemId;
 
   private Long configId;
 }
