@@ -35,7 +35,7 @@ public class GeneralLotteryDrawingService extends AbstractLotteryDrawingService 
   @Override
   protected LotteryDrawingRes buildLotteryRes(LotteryDrawingReq req, Long awardId) {
     LotteryDrawingRes drawingRes = new LotteryDrawingRes(awardId);
-    drawingRes.setAwardInfo(AwardVO.apply(awardService.getById(awardId)));
+    drawingRes.setAwardInfo(AwardVO.apply(awardService.getByAwardId(awardId)));
     return drawingRes;
   }
 }

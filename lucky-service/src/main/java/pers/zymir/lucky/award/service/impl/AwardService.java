@@ -14,7 +14,7 @@ public class AwardService implements IAwardService {
   private AwardMapper awardMapper;
 
   @Override
-  public LuckyAward getById(Long id) {
-    return awardMapper.selectById(id);
+  public LuckyAward getByAwardId(Long awardId) {
+    return awardMapper.selectByAwardId(awardId);
   }
 }

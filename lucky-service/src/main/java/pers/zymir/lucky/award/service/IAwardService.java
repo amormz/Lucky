@@ -4,6 +4,6 @@ import pers.zymir.lucky.po.LuckyAward;
 
 public interface IAwardService {
 
-  LuckyAward getById(Long id);
+  LuckyAward getByAwardId(Long awardId);
 
 }
